@@ -1,0 +1,122 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="420dp"
+    android:background="@drawable/fim0estrelas"
+    android:id="@+id/dialog_background"
+    android:elevation="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="65dp"
+        android:gravity="center_horizontal">
+
+        <!-- Título do nível -->
+        <TextView
+            android:id="@+id/tv_nivel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nível 1"
+            android:fontFamily="@font/jellee_roman"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#333"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Objetivos com imagem -->
+        <LinearLayout
+            android:id="@+id/layout_objetivos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="16dp">
+
+                <ImageView
+                    android:id="@+id/img_objetivo1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/objeto1"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/tv_qtd_objetivo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/img_objetivo1"
+                    android:layout_alignEnd="@id/img_objetivo1"
+                    android:text="x8"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_quantidade"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:id="@+id/img_objetivo2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/objeto2"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/tv_qtd_objetivo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/img_objetivo2"
+                    android:layout_alignEnd="@id/img_objetivo2"
+                    android:text="x12"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_quantidade"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- Boosters -->
+        <LinearLayout
+            android:id="@+id/layout_boosters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <include layout="@layout/booster_item" />
+            <include layout="@layout/booster_item" />
+            <include layout="@layout/booster_item" />
+            <include layout="@layout/booster_item" />
+        </LinearLayout>
+
+        <!-- Jogadas -->
+        <TextView
+            android:id="@+id/tv_jogadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jogadas: 20"
+            android:fontFamily="@font/jellee_roman"
+            android:textColor="#333"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Botão de começar -->
+        <ImageButton
+            android:id="@+id/btn_comecar"
+            android:layout_width="185dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/btnplayitem"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</FrameLayout>

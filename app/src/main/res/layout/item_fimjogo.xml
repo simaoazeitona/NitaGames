@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_resultado"
+    android:layout_width="320dp"
+    android:layout_height="400dp"
+    android:background="@drawable/fim0estrelas"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tv_result_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vitória!"
+        android:textSize="22sp"
+        android:fontFamily="@font/jellee_roman"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/tv_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alcançou: 0%"
+        android:textSize="18sp"
+        android:fontFamily="@font/jellee_roman"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/tv_result_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Novo elemento: exibição das moedas ganhas -->
+    <TextView
+        android:id="@+id/tv_moedas_ganhas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moedas: 0"
+        android:textSize="18sp"
+        android:fontFamily="@font/jellee_roman"
+        android:textColor="@color/black"
+        android:layout_below="@id/tv_percentage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"/>
+
+    <!-- Layout para os objetivos com imagem e texto -->
+    <LinearLayout
+        android:id="@+id/layout_objetivos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_percentage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <!-- Bloco do Objetivo 1 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_objetivo1_fim"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/objeto1" />
+
+            <TextView
+                android:id="@+id/tv_objetivo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 / 0"
+                android:textSize="16sp"
+                android:fontFamily="@font/jellee_roman"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Bloco do Objetivo 2 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_objetivo2_fim"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/objeto2" />
+
+            <TextView
+                android:id="@+id/tv_objetivo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 / 0"
+                android:fontFamily="@font/jellee_roman"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/btn_continuar"
+        android:layout_width="180dp"
+        android:layout_height="75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/img_continuar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/continuar" />
+
+        <TextView
+            android:id="@+id/tv_continuar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Continuar"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/jellee_roman"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginHorizontal="6dp">
+
+    <!-- O ImageButton que faz tudo de "botão" -->
+    <ImageButton
+        android:id="@+id/img_boost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/booster1"
+        android:scaleType="fitCenter"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <!-- O TextView para a quantidade, posicionado sobre o ImageButton -->
+    <TextView
+        android:id="@+id/tv_boost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="x3"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:background="@drawable/bg_quantidade"/>
+</FrameLayout>
+

@@ -1,0 +1,285 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:background="@android:color/transparent"
+    android:foreground="@android:color/transparent"
+    android:layout_height="500dp">
+
+    <!-- Imagem de fundo -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:foreground="@android:color/transparent"
+        android:layout_height="match_parent"
+        android:background="@drawable/perfil01"/>
+
+    <!-- Conteúdo sobreposto à imagem -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:background="@null">
+
+        <!-- Cabeçalho: Botão de saída e Imagem do perfil -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_perfil"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginVertical="35dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/moldura"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/btnSair"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:background="@drawable/btnsair"/>
+        </LinearLayout>
+
+        <!-- Layout para exibir avatares ao clicar na moldura -->
+        <LinearLayout
+            android:id="@+id/layout_avatares"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_marginStart="5dp"
+                android:id="@+id/avatar1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/avatar1"/>
+
+            <ImageView
+                android:id="@+id/avatar2"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/avatar2"/>
+
+            <ImageView
+                android:id="@+id/avatar3"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/avatar3"/>
+
+            <ImageView
+                android:id="@+id/avatar4"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/avatar4"/>
+
+            <ImageView
+                android:id="@+id/avatar5"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/avatar5"/>
+        </LinearLayout>
+
+        <!-- Textos informativos -->
+        <TextView
+            android:id="@+id/tv_nivel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Nível: 1"
+            android:textColor="#404040"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_estrelas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#404040"
+            android:text="⭐ Total de Estrelas: 0"
+            android:textSize="16sp"/>
+
+        <!-- Boosters -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="25dp">
+
+            <!-- Booster 1 com botão de compra -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:id="@+id/img_boost1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/booster1" />
+
+                    <TextView
+                        android:id="@+id/tv_boost1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="0"
+                        android:textSize="16sp"
+                        android:layout_gravity="center"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:background="@drawable/bg_quantidade" />
+
+                    <ImageButton
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="30dp"
+                        android:id="@+id/btn_compra_boost1"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/ic_plus"
+                        android:contentDescription="Comprar booster 1"/>
+                </RelativeLayout>
+
+                <!-- Botão de compra (+) para o booster 1 -->
+                </LinearLayout>
+
+            <!-- Repita a estrutura para Booster 2 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="12dp">
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+                    <ImageView
+                        android:id="@+id/img_boost2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/booster2" />
+                    <TextView
+                        android:id="@+id/tv_boost2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="0"
+                        android:textSize="16sp"
+                        android:layout_gravity="center"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:background="@drawable/bg_quantidade" />
+
+                    <ImageButton
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="30dp"
+                        android:id="@+id/btn_compra_boost2"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/ic_plus"
+                        android:contentDescription="Comprar booster 2" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- Booster 3 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="12dp">
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+                    <ImageView
+                        android:id="@+id/img_boost3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/booster3" />
+                    <TextView
+                        android:id="@+id/tv_boost3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="0"
+                        android:textSize="16sp"
+                        android:layout_gravity="center"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:background="@drawable/bg_quantidade" />
+
+                     <ImageButton
+                         android:layout_marginTop="30dp"
+                         android:layout_marginStart="30dp"
+                         android:id="@+id/btn_compra_boost3"
+                         android:layout_width="18dp"
+                         android:layout_height="18dp"
+                         android:background="@drawable/ic_plus"
+                         android:contentDescription="Comprar booster 2" />
+
+                </RelativeLayout>
+                </LinearLayout>
+
+            <!-- Booster 4 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="12dp">
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+                    <ImageView
+                        android:id="@+id/img_boost4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/booster4" />
+                    <TextView
+                        android:id="@+id/tv_boost4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="0"
+                        android:textSize="16sp"
+                        android:layout_gravity="center"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:background="@drawable/bg_quantidade" />
+
+
+                    <ImageButton
+                        android:id="@+id/btn_compra_boost4"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/ic_plus"
+                        android:contentDescription="Comprar booster 2"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+                </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

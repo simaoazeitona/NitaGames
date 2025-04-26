@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/estradasmaiores"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!-- Barra de frutas alvo e jogadas -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/barranav"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/tv_jogadas_restantes"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/moves"
+            android:fontFamily="@font/jellee_roman"
+            android:text="\n10"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <!-- Fruta 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_fruta1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/objeto1" />
+
+            <TextView
+                android:id="@+id/tv_qtd_fruta1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x0"
+                android:textSize="16sp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <!-- Fruta 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_fruta2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/objeto2" />
+
+            <TextView
+                android:id="@+id/tv_qtd_fruta2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x0"
+                android:textSize="16sp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Container da grelha do jogo -->
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:background="@drawable/fundoquadrado"
+        android:padding="20dp"
+        android:orientation="vertical">
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:columnCount="6"
+            android:padding="25dp"
+            android:rowCount="6" />
+    </LinearLayout>
+
+    <!-- Linha para exibir as estrelas em tempo real na tela do jogo -->
+    <LinearLayout
+        android:id="@+id/layout_estrelas_jogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:id="@+id/iv_star_game1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/semestrela" />
+        <ImageView
+            android:id="@+id/iv_star_game2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/semestrela"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+        <ImageView
+            android:id="@+id/iv_star_game3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/semestrela" />
+    </LinearLayout>
+
+
+    <!-- Boosters -->
+    <LinearLayout
+        android:id="@+id/layout_boosters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <include
+            android:id="@+id/btn_booster1"
+            layout="@layout/booster_item" />
+        <include
+            android:id="@+id/btn_booster2"
+            layout="@layout/booster_item" />
+        <include
+            android:id="@+id/btn_booster3"
+            layout="@layout/booster_item" />
+        <include
+            android:id="@+id/btn_booster4"
+            layout="@layout/booster_item" />
+    </LinearLayout>
+
+</LinearLayout>
